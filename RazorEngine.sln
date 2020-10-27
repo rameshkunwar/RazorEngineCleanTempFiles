@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailParserLibrary", "EmailParserLibrary\EmailParserLibrary.csproj", "{BDB3DAC6-FD9A-4FDF-8EDF-762F01F502D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateEmail", "GenerateEmail\GenerateEmail.csproj", "{BF680FCD-CC51-4E83-BF30-72A39C244D86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorEngineMailerParserService", "RazorEngineMailerParserService\RazorEngineMailerParserService.csproj", "{4D6041CC-0662-4463-AEE4-94499076F536}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDB3DAC6-FD9A-4FDF-8EDF-762F01F502D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB3DAC6-FD9A-4FDF-8EDF-762F01F502D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB3DAC6-FD9A-4FDF-8EDF-762F01F502D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB3DAC6-FD9A-4FDF-8EDF-762F01F502D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF680FCD-CC51-4E83-BF30-72A39C244D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF680FCD-CC51-4E83-BF30-72A39C244D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF680FCD-CC51-4E83-BF30-72A39C244D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF680FCD-CC51-4E83-BF30-72A39C244D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6041CC-0662-4463-AEE4-94499076F536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6041CC-0662-4463-AEE4-94499076F536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6041CC-0662-4463-AEE4-94499076F536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6041CC-0662-4463-AEE4-94499076F536}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54FF1C5C-3B77-4CEE-B7ED-C53236EC8694}
+	EndGlobalSection
+EndGlobal
