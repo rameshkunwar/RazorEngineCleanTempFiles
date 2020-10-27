@@ -1,21 +1,24 @@
-### React JS template for ASP.NET MVC/Web API (.net framework 4.x.x).
+### RazorEngine temporary files deletion using proxy domain.
 
-Webpack is configured in a way it injects scripts and styles inside _Layout.cshtml based on a template file _Template.cshtml.
+From the RazorEngine [Github page](https://github.com/Antaris/RazorEngine),
 
-Webpack splits the output bundle as well as hashed name is used to force the browser to reload if any changes has been made.
+> RazorEngine tries hard to delete the temporary files it creates, but this is not always possible. This is especially true if you run RazorEngine from the default AppDomain. RazorEngine will warn you in this situation by writing to the stderr.
+
+The given solution works for console application. It unloads the proxy Appdomain when exiting the main. This approach won't work if the program is run as a Windows services.
+
+MarshalByRefObject is used to access to objects across application domain boundaries.
 
 ### Installation
+
 1. Install all Nuget packages by right-clicking the Solution (on Visual Studio) and selecting Restore Nuget Packages.
-2. React dependencies:
-	- Go to the root folder, which is wwwroot on the command prompt or can also be done using Visual Studio Code. Right-click the folder wwwroot and 
-	select Open With Code. Use Visual Studio Code to run `npm install`
-	- Alternatively, open *wwwroot* on command prompt and type 'npm install'
+2. Installing Service:
 
-### Running
-1. On Visual Studio Code terminal or command prompt, type `npm run start` for development or `npm run build` for production.
-2. Hit F5 on Visual Studio to run IIS Express.
-3. Application will be loaded in the choosen browser (in Visual Studio).
+   - Go to the root folder of the project, _RazorEngineMailerParserService_
+   - Go to /bin/release (remember to compile using Release compiler directive, though debug will be fine for development)
+   - Go to the address bar and copy the path, remember to include executable name, _RazorEngineMailerParserService.exe_
+   - Open command prompt as an administratory, go to `C:\Windows\Microsoft.NET\Framework\v4.0.30319>`
+   - Type following `C:\Windows\Microsoft.NET\Framework\v4.0.30319>InstallUtil.exe D:\Workspace\RazorEngine\RazorEngine\RazorEngineMailerParserService\bin\Release\RazorEngineMailerParserService.exe`
+   - Press Windows key + r to open _Run_ and type _services.msc_
+   - Find the service and run it.
 
-> Remember, I have used two names above Visual Studio and Visual Studio Code!
-
-#### I recommend using Visual Studio Code for front-end developement.
+### The console application **GenerateEmail** can be run just by pressing F5 (make sure it's the startup project).
